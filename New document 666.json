@@ -1,0 +1,116 @@
+{
+  "data": {
+    "users": {
+      "user1": {
+        "name": "John Doe",
+        "email": "john@email.com",
+        "phone": "8760000000",
+        "defaultAddress": "Kingston",
+        "createdAt": "now"
+      }
+    },
+    "drivers": {
+      "driver1": {
+        "name": "Mike Brown",
+        "phone": "8761111111",
+        "vehicleType": "bike",
+        "plateNumber": "123ABC",
+        "online": true,
+        "rating": 4.9
+      }
+    },
+    "restaurants": {
+      "restaurant1": {
+        "name": "Island Burger",
+        "address": "Half Way Tree",
+        "phone": "8762222222",
+        "open": true,
+        "rating": 4.7
+      }
+    },
+    "menus": {
+      "restaurant1": {
+        "product1": {
+          "name": "Cheese Burger",
+          "price": 8.99,
+          "available": true
+        },
+        "product2": {
+          "name": "Chicken Burger",
+          "price": 9.99,
+          "available": true
+        }
+      }
+    },
+    "orders": {
+      "order1": {
+        "userId": "user1",
+        "restaurantId": "restaurant1",
+        "driverId": "driver1",
+        "status": "pending",
+        "items": {
+          "product1": {
+            "name": "Cheese Burger",
+            "qty": 1,
+            "price": 8.99
+          }
+        },
+        "total": 8.99,
+        "deliveryAddress": "Newlands",
+        "createdAt": "now"
+      }
+    },
+    "payments": {
+      "payment1": {
+        "orderId": "order1",
+        "method": "cash",
+        "status": "pending",
+        "amount": 8.99
+      }
+    },
+    "reviews": {
+      "review1": {
+        "orderId": "order1",
+        "userId": "user1",
+        "rating": 5,
+        "comment": "Fast delivery"
+      }
+    },
+    "notifications": {
+      "notification1": {
+        "userId": "user1",
+        "title": "Order Confirmed",
+        "message": "Your order has been received",
+        "read": false
+      }
+    }
+  },
+  "live": {
+    "driverLocations": {
+      "driver1": {
+        "lat": 18.0179,
+        "lng": -76.8099,
+        "updatedAt": "now"
+      }
+    },
+    "driverRequests": {
+      "request1": {
+        "orderId": "order1",
+        "driverId": "driver1",
+        "status": "waiting"
+      }
+    },
+    "activeOrders": {
+      "order1": {
+        "status": "driver_assigned"
+      }
+    }
+  },
+  "admin": {
+    "settings": {
+      "currency": "USD",
+      "deliveryFee": 3.00,
+      "tax": 0.15
+    }
+  }
+}
